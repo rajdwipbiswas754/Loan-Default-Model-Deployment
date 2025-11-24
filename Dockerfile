@@ -1,5 +1,5 @@
 FROM python:3.13-slim
-WORKDIR /APP
+WORKDIR /app
 COPY requirements.txt
 RUN pip install
 EXPOSE 8000
