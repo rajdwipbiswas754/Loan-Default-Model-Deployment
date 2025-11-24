@@ -19,5 +19,5 @@ app = FastAPI()
 @app.post("/predict")
 async def pred(request:Request):
     input_features = await request.json()
-    output = model_response(input_features["data"], "./Loan_Default_Model.pkl")
+    output = model_response(input_features["data"], "app/Loan_Default_Model.pkl")
     return {"Will Default":output}
